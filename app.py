@@ -1,4 +1,5 @@
 from tasks.homepage import HomePageUser
+from tasks.login import LoginPageUser
 from tasks.manwomenpage import ManOrWomenPageUser
 from tasks.productpage import ProductPageUser
 from locust import between
@@ -9,4 +10,5 @@ class MyUser:
 
     tasks = [HomePageUser,
              ProductPageUser,
-             ManOrWomenPageUser]
+             ManOrWomenPageUser,
+             LoginPageUser]

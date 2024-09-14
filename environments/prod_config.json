@@ -1,4 +1,17 @@
 {
   "host": "http://www.trendyol.com",
-  "api_key": "prod-api-key"
+  "api_key": "prod-api-key",
+  "endpoints": {
+    "productPage": {
+      "iphone": "/sr?rb=1617",
+      "bag": "/sr/?q=canta&qt=çanta&st=çanta"
+    },
+    "menOrWomenPage": {
+      "men": "/butik/liste/2/erkek?srsltid=AfmBOoo1gqoeAdBWC9DReRy8yd_bLp96Xeo1iPTZcDPnfKLGHgo99l8H",
+      "women": "/butik/liste/1/kadin"
+    },
+    "loginPage": {
+      "loginMainPage": "/giris?cb=%2F"
+    }
+  }
 }

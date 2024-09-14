@@ -1,16 +1,19 @@
 from locust import tag
-from tasks.base import BaseUser
+from tasks.base import BaseUser, config
+
+menWomenPage_endpoints = config['endpoints']['menOrWomenPage']
 
 
-@tag('manWomenPage/manPage')
-def load_man_page(user):
-    user.client.get("/butik/liste/2/erkek?srsltid=AfmBOoo1gqoeAdBWC9DReRy8yd_bLp96Xeo1iPTZcDPnfKLGHgo99l8H")
+@tag('menWomenPage/manPage')
+def load_men_page(user):
+    user.client.get(menWomenPage_endpoints["men"])
 
-@tag('manWomenPage/womenPage')
+
+@tag('menWomenPage/womenPage')
 def load_women_page(user):
-    user.client.get("/butik/liste/1/kadin")
+    user.client.get(menWomenPage_endpoints["women"])
 
 
 class ManOrWomenPageUser(BaseUser):
-    tasks = [load_man_page,
+    tasks = [load_men_page,
              load_women_page]

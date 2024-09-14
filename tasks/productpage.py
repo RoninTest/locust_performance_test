@@ -1,15 +1,17 @@
 from locust import tag
-from tasks.base import BaseUser
+from tasks.base import BaseUser, config
+
+product_page_endpoints = config['endpoints']['productPage']
 
 
 @tag('productPage/Iphone')
 def load_product_page_iphone(user):
-    user.client.get("/sr?rb=1617")
+    user.client.get(product_page_endpoints["iphone"])
 
 
 @tag('productPage/Bag')
 def load_product_page_bag(user):
-    user.client.get("/sr/?q=canta&qt=çanta&st=çanta")
+    user.client.get(product_page_endpoints["bag"])
 
 
 class ProductPageUser(BaseUser):
