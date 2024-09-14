@@ -1,0 +1,4 @@
+{
+  "host": "http://preprod.example.com",
+  "api_key": "preprod-api-key"
+}
