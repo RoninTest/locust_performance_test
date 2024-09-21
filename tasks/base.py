@@ -9,4 +9,3 @@ config = load_config(env)
 class BaseUser(HttpUser):
     abstract = True
     host = config['host']
-
